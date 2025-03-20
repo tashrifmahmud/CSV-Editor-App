@@ -24,7 +24,7 @@ Built using **Streamlit**, this tool was built to preprocess geophysics datasets
 
 ### **1️. Clone the Repository**
 ```bash
-git clone https://github.com/your-repo/csv-editor
+git clone https://github.com/tashrifmahmud/CSV-Editor-App.git
 cd csv-editor
 ```
 
