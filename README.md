@@ -1,2 +1,48 @@
-# CSV-Editor-App
-A Streamlit-based interactive tool for editing, renaming, and standardizing large .csv files while preserving folder structure. Designed for efficient preprocessing of geophysics and machine learning datasets. 
+# CSV Editor & Formatter
+
+## Overview
+This interactive application allows users to **load, edit, and standardize large `.csv` files** efficiently.  
+It enables:
+- **Selecting only the required columns**
+- **Renaming columns using predefined standard names**
+- **Removing unnecessary columns**
+- **Saving formatted files while maintaining the original folder structure**
+
+Built using **Streamlit**, this tool was built to preprocess geophysics datasets for **machine learning models**.
+
+---
+
+## 🚀 Features
+- **Handles Large `.csv` Files Efficiently** – Works with large datasets without crashing  
+- **Interactive UI with Dropdowns** – Easy selection & renaming of columns  
+- **Preserves Folder Structure** – Saves formatted files in a structured way (`Formatted_Data/`)  
+- **Quick Execution with Batch File** – Run the app with `run.bat`  
+
+---
+
+## 🛠 Installation
+
+### **1️. Clone the Repository**
+```bash
+git clone https://github.com/your-repo/csv-editor
+cd csv-editor
+```
+
+### **2. Install Dependencies**
+Make sure you have Python installed (preferably Python 3.10+).
+Then, install required packages:
+```bash
+pip install -r requirements.txt
+```
+### **3. Run the Application**
+Simply double-click `run.bat` to start the app.
+Alternatively, you can run it manually:
+```bash
+streamlit run app.py
+```
+
+### How to Use
+1️. Select a CSV file from the list.
+2️. Choose which columns to keep or delete.
+3️. Rename columns using the dropdown menu.
+4️. Click "Apply Changes & Save" – The modified file is saved in formatted_data/, maintaining the folder structure.
