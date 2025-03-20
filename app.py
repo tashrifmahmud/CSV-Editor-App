@@ -7,7 +7,7 @@ from file_handler import list_csv_files, preview_csv
 STANDARD_COLUMNS = ["Coord_X", "Coord_Y", "resistivity", "conductivity", "K_corr", "TH_corr", "U_corr", "mag_res", "mag_dev", "altitude"]
 
 # Streamlit App
-st.title("CSV Column Selector & Renamer")
+st.title("CSV Editor & Formatter")
 
 # Select project folder
 data_folder = "data"  # We can change data directory if needed
