@@ -40,9 +40,10 @@ Alternatively, you can run it manually:
 ```bash
 streamlit run app.py
 ```
+---
 
 ### How to Use
-1️. Select a CSV file from the list.
-2️. Choose which columns to keep or delete.
-3️. Rename columns using the dropdown menu.
-4️. Click "Apply Changes & Save" – The modified file is saved in formatted_data/, maintaining the folder structure.
+- Select a CSV file from the list.
+- Choose which columns to keep or delete.
+- Rename columns using the dropdown menu.
+- Click "Apply Changes & Save" – The modified file is saved in formatted_data/, maintaining the folder structure.
