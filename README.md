@@ -12,7 +12,7 @@ Built using **Streamlit**, this tool was built to preprocess geophysics datasets
 
 ---
 
-## 🚀 Features
+## Features
 - **Handles Large `.csv` Files Efficiently** – Works with large datasets without crashing  
 - **Interactive UI with Dropdowns** – Easy selection & renaming of columns  
 - **Preserves Folder Structure** – Saves formatted files in a structured way (`Formatted_Data/`)  
@@ -20,7 +20,7 @@ Built using **Streamlit**, this tool was built to preprocess geophysics datasets
 
 ---
 
-## 🛠 Installation
+## Installation
 
 ### **1️. Clone the Repository**
 ```bash
