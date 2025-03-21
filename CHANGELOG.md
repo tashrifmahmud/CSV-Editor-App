@@ -8,6 +8,7 @@ All notable changes to this project will be documented here.
 
 ## [v1.0.1] - 2025-03-21
 ### Added
+- Segmentation option added
 - Toggle to show only unedited CSV files
 - Reset column selections button
 - Auto-uncheck delete if column is renamed
