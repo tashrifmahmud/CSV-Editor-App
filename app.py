@@ -104,8 +104,17 @@ if csv_files:
         if delete:
             delete_columns.append(col)
 
-    # Apply Changes
-    
+
+    # Optional categorization for saving in segmented_data
+    st.write("### Optional: Categorize This Dataset")
+    category = st.selectbox(
+        "Categorize this file as:",
+        options=["None", "Magnetic (MAG)", "Electromagnetic (EM)", "Radiometric (SPEC)", "Gravimetric (GRAV)"],
+        index=0
+    )
+
+
+    # Apply Changes and Save Button
     if st.button("Apply Changes & Save"):
         # Reload the full CSV file
         full_df = pd.read_csv(file_path)
@@ -117,8 +126,21 @@ if csv_files:
         full_df = full_df.rename(columns=new_columns)
 
         # Save the processed file in Formatted_Data, maintaining folder structure
-        formatted_folder = "formatted_data"
-        save_path = os.path.join(formatted_folder, selected_file)
+        if category == "None":
+            base_folder = "formatted_data"
+        else:
+            category_folder_map = {
+                "Magnetic (MAG)": "MAG",
+                "Electromagnetic (EM)": "EM",
+                "Radiometric (SPEC)": "SPEC",
+                "Gravimetric (GRAV)": "GRAV"
+            }
+            base_folder = os.path.join("segmented_data", category_folder_map[category])
+
+        # Final save path with preserved subfolder structure
+        save_path = os.path.join(base_folder, selected_file)
+
+
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         full_df.to_csv(save_path, index=False)
 
