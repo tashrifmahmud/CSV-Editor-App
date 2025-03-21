@@ -6,15 +6,19 @@ All notable changes to this project will be documented here.
 - Planned: Export to Excel
 - Planned: Multi-file processing
 
-## [v1.0.1] - 2025-03-21
+## [v1.0.2] - 2025-03-21
 ### Added
-- Segmentation option added
+- Optional data segmentation feature added
+- Code optimized
+
+## [v1.0.1] - 2025-03-20
+### Added
 - Toggle to show only unedited CSV files
 - Reset column selections button
 - Auto-uncheck delete if column is renamed
 - Logging of modified files
 
-## [v1.0.0] - 2025-03-20
+## [v1.0.0] - 2025-03-19
 ### Added
 - Load and preview CSV files
 - Select and rename columns
