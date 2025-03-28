@@ -22,3 +22,5 @@ Thumbs.db
 # Ignore formatted_data folder
 formatted_data/
 segmented_data/
+
+modified_log.txt
