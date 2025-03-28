@@ -8,8 +8,11 @@ All notable changes to this project will be documented here.
 
 ## [v1.0.2] - 2025-03-21
 ### Added
+- Regional data segmentation feature added for ON, QC, US, AU
+
+## [v1.0.2] - 2025-03-21
+### Added
 - Optional data segmentation feature added
-- Code optimized
 
 ## [v1.0.1] - 2025-03-20
 ### Added
