@@ -105,13 +105,23 @@ if csv_files:
             delete_columns.append(col)
 
 
-    # Optional categorization for saving in segmented_data
-    st.write("### Optional: Categorize This Dataset")
-    category = st.selectbox(
-        "Categorize this file as:",
-        options=["None", "Magnetic (MAG)", "Electromagnetic (EM)", "Radiometric (SPEC)", "Gravimetric (GRAV)"],
-        index=0
+    # # Optional categorization for saving in segmented_data (uncomment to try the previous version)
+    # st.write("### Optional: Categorize This Dataset")
+    # category = st.selectbox(
+    #     "Categorize this file as:",
+    #     options=["None", "Magnetic (MAG)", "Electromagnetic (EM)", "Radiometric (SPEC)", "Gravimetric (GRAV)"],
+    #     index=0
+    # )
+
+    # New optional categorization for saving in edited_data
+    st.write("### Save Destination")
+
+    region = st.selectbox("Select the data region:", ["ON, Canada", "QC, Canada", "USA", "Australia"])
+    data_type = st.selectbox(
+        "Select the data type:",
+        ["Magnetic (MAG)", "Electromagnetic (EM)", "Radiometric (SPEC)", "Gravimetric (GRAV)"]
     )
+
 
 
     # Apply Changes and Save Button
@@ -125,20 +135,33 @@ if csv_files:
         # Rename columns
         full_df = full_df.rename(columns=new_columns)
 
-        # Save the processed file in Formatted_Data, maintaining folder structure
-        if category == "None":
-            base_folder = "formatted_data"
-        else:
-            category_folder_map = {
-                "Magnetic (MAG)": "MAG",
-                "Electromagnetic (EM)": "EM",
-                "Radiometric (SPEC)": "SPEC",
-                "Gravimetric (GRAV)": "GRAV"
-            }
-            base_folder = os.path.join("segmented_data", category_folder_map[category])
+        # # Save the processed file in Formatted_Data, maintaining folder structure (uncomment to try the previous version)
+        # if category == "None":
+        #     base_folder = "formatted_data"
+        # else:
+        #     category_folder_map = {
+        #         "Magnetic (MAG)": "MAG",
+        #         "Electromagnetic (EM)": "EM",
+        #         "Radiometric (SPEC)": "SPEC",
+        #         "Gravimetric (GRAV)": "GRAV"
+        #     }
+        #     base_folder = os.path.join("segmented_data", category_folder_map[category])
 
-        # Final save path with preserved subfolder structure
-        save_path = os.path.join(base_folder, selected_file)
+        # # Final save path with preserved subfolder structure
+        # save_path = os.path.join(base_folder, selected_file)
+
+        # New save path logic for edited_data
+        category_folder_map = {
+            "Magnetic (MAG)": "MAG",
+            "Electromagnetic (EM)": "EM",
+            "Radiometric (SPEC)": "SPEC",
+            "Gravimetric (GRAV)": "GRAV"
+        }
+        base_folder = os.path.join("edited_data", region, category_folder_map[data_type])
+
+        # Final save path (flat structure, no original subfolders)
+        file_name = os.path.basename(selected_file)
+        save_path = os.path.join(base_folder, file_name)
 
 
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
