@@ -3,7 +3,7 @@
 All notable changes to this project will be documented here.
 
 ## [Unreleased]
-- Planned: Export to Excel
+- Planned: Desktop App.
 - Planned: Multi-file processing
 
 ## [v1.0.2] - 2025-03-21
